@@ -16,6 +16,10 @@ const PICTURES = 80;
 const PENCIL = 40;
 const MARKER = 23;
 
+echo "На школьной выставке " . PICTURES . " рисунков. " . MARKER . " из них выполнены фломастерами, " . PENCIL;
+echo " карандашами, а остальные — красками." . "<br>";
+echo "Сколько рисунков, выполненные красками, на школьной выставке?" . "<br>";
+
 $paints = PICTURES - PENCIL - MARKER;
 print_r("Количество картин нарисованное красками : $paints");
 echo "<br>";
@@ -98,3 +102,34 @@ for ($i = 1; $i <= 10; $i++) {
     print_r("\n");
 }
 echo '</table>';
+
+
+// Задание №5 NEW
+echo '<br>';
+echo '<br>';
+
+$bmw = [
+    'model' => 'X5',
+    'speed' => 120,
+    'doors' => 5,
+    'year' => '2015'
+];
+$toyota = [
+    'model' => 'Camry',
+    'speed' => 110,
+    'doors' => 4,
+    'year' => '2016'
+];
+$opel = [
+    'model' => 'Corsa',
+    'speed' => 100,
+    'doors' => 4,
+    'year' => '2012'];
+
+$cars = ['bmw' => $bmw, 'toyota' => $toyota, 'opel' => $opel];
+
+foreach ($cars as $auto => $car) {
+    echo "CAR $auto<br>";
+    echo $car['model'] . " " . $car['speed'] . " " . $car['doors'] . " " . $car['year'] . " " . '<br>';
+    echo '<br>';
+}
